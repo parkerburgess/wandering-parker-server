@@ -1,6 +1,6 @@
 {
   "name": "@wanderingparker/server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Shared SQL Server connection pool and JWT auth helpers for wandering-parker apps",
   "license": "UNLICENSED",
@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@types/mssql": "^12.3.0",
     "jose": "^6.2.3",
     "mssql": "^12.7.0"
   },
@@ -18,7 +19,6 @@
     "next": ">=16.0.0"
   },
   "devDependencies": {
-    "@types/mssql": "^12.3.0",
     "@types/node": "^20",
     "next": "16.3.0",
     "typescript": "^5"
