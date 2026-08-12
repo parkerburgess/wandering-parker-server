@@ -25,6 +25,7 @@ function isRetryable(error: unknown): boolean {
   const msg = error instanceof Error ? error.message : String(error);
   return (
     msg.includes("40613") ||
+    
     msg.includes("not currently available") ||
     msg.includes("ECONNREFUSED") ||
     msg.includes("Connection timeout") ||
