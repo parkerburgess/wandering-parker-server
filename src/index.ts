@@ -1,2 +1,2 @@
-export { getPool } from "./pool";
+export { getPool, executeQuery } from "./pool";
 export { getUserId, getUserName } from "./auth";
