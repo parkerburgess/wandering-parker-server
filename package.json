@@ -1,6 +1,6 @@
 {
   "name": "@parkerburgess/wandering-parker-server",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Shared SQL Server connection pool and JWT auth helpers for wandering-parker apps",
   "license": "UNLICENSED",
   "repository": {
