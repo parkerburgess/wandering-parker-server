@@ -1,6 +1,6 @@
 {
   "name": "@parkerburgess/wandering-parker-server",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Shared SQL Server connection pool and JWT auth helpers for wandering-parker apps",
   "license": "UNLICENSED",
   "repository": {
@@ -20,7 +20,8 @@
       "types": "./dist/pool.d.ts",
       "default": "./dist/pool.js"
     },
-    "./auth": "./src/auth.ts"
+    "./auth": "./src/auth.ts",
+    "./readonly": "./src/readonly.ts"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
