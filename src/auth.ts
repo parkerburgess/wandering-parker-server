@@ -1,8 +1,10 @@
 import { decodeJwt } from "jose";
 import { cookies } from "next/headers";
 
-const DEV_USER_ID = "dev-user-1";
-const DEV_USER_NAME = "Dev User (Parker)";
+// With auth disabled, dev runs as the shared Guest account (dbo.User 32).
+// The auth service issues numeric IDs, and the JWT sub is that ID as a string.
+const DEV_USER_ID = "32";
+const DEV_USER_NAME = "Guest";
 
 function isAuthDisabled(): boolean {
   return process.env.DISABLE_AUTH === "true" && process.env.NODE_ENV !== "production";
