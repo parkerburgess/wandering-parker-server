@@ -31,3 +31,19 @@ export async function getUserName(): Promise<string | null> {
     return null;
   }
 }
+
+/**
+ * The signed-in user's email, or null for the shared Guest account (and for
+ * dev with auth disabled, which runs as Guest). Lets a form pre-fill a real
+ * user's address while asking a Guest for theirs.
+ */
+export async function getUserEmail(): Promise<string | null> {
+  if (isAuthDisabled()) return null;
+  try {
+    const email = (await getPayload()).email as string | undefined;
+    if (!email || email === process.env.GUEST_EMAIL) return null;
+    return email;
+  } catch {
+    return null;
+  }
+}
